@@ -1,0 +1,67 @@
+---
+title: puter.print()
+description: Prints a string by appending it to the body of the document.
+platforms: [websites, apps]
+---
+
+Prints a string by appending it to the body of the document.
+
+This is useful for debugging and testing purposes and is not recommended for production use.
+
+## Syntax
+
+```js
+puter.print(text)
+puter.print(text, options)
+```
+
+## Parameters
+
+#### `text` (String)
+
+The text to print.
+
+#### `options` (Object, optional)
+
+An object containing options for the print function. It must be the last argument.
+
+| Option | Type | Description |
+|--------|------|-------------|
+| `code` | `Boolean` | If `true`, the text will be printed as code by wrapping it in a `<code>` and `<pre>` tag. Defaults to `false`. Implies `escapeHTML`. |
+| `escapeHTML` | `Boolean` | If `true`, HTML in the text is escaped rather than rendered. Defaults to `false`. |
+
+## Examples
+
+### Print "Hello, world!"
+
+<div style="position: relative;">
+
+```html
+<html>
+  <body>
+    <script src="https://js.puter.com/v2/"></script>
+    <script>
+      puter.print("Hello, world!");
+    </script>
+  </body>
+</html>
+```
+
+</div>
+
+### Print "Hello, world!" as code
+
+<div style="position: relative;">
+
+```html
+<html>
+  <body>
+    <script src="https://js.puter.com/v2/"></script>
+    <script>
+      puter.print("Hello, world!", { code: true });
+    </script>
+  </body>
+</html>
+```
+
+</div>

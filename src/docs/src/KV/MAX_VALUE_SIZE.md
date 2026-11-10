@@ -1,0 +1,30 @@
+---
+title: puter.kv.MAX_VALUE_SIZE
+description: Returns the maximum value size (in bytes) for the key-value store.
+platforms: [websites, apps, nodejs, workers]
+---
+
+The largest value the key-value store accepts, in bytes.
+
+It's `408576` (399 KB). A value is measured as the UTF-8 bytes of `JSON.stringify(value)`, so a string's quotes and escapes count.
+
+## Syntax
+
+```js
+puter.kv.MAX_VALUE_SIZE
+```
+
+## Examples
+
+### Get the max value size
+
+```html
+<html>
+  <body>
+    <script src="https://js.puter.com/v2/"></script>
+    <script>
+      puter.print("Max Value Size: " + puter.kv.MAX_VALUE_SIZE);
+    </script>
+  </body>
+</html>
+```
